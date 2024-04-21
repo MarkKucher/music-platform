@@ -1,0 +1,14 @@
+.mainDiv {
+  width: 15%;
+  height: 64px;
+  min-width: 150px;
+  display: flex;
+  background: white;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  position: fixed;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  border: 3px solid lightgray;
+  z-index: 2;
+}

@@ -1,0 +1,17 @@
+.page__wrapper {
+  margin-top: 30px;
+  display: flex;
+}
+
+.page {
+  color: gray;
+  padding: 10px;
+  border: 1px solid lightgray;
+  cursor: pointer;
+}
+
+.page__current {
+  color: black;
+  border: 2px solid dodgerblue;
+  font-weight: bold;
+}

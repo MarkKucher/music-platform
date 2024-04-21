@@ -1,0 +1,17 @@
+.content {
+  margin: 70px 0;
+  height: 270px;
+}
+
+.card {
+  width: 600px;
+}
+
+.steps {
+  @media screen and (max-width: 360px) {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    height: 100px !important;
+    padding-left: 25vw !important;
+  }
+}

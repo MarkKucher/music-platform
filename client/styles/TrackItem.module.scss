@@ -1,0 +1,49 @@
+.track {
+  margin: 20px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  @media screen and (max-width: 700px) {
+    margin: 20px 0;
+  }
+  @media screen and (max-width: 650px) {
+    font-size: 0.8rem;
+  }
+}
+
+.track:hover {
+  background: lightgray;
+}
+
+.title {
+  margin-right: auto;
+}
+
+.title {
+  overflow-x: hidden;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.info, .timer {
+margin-right: 10px;
+}
+
+.remove {
+  padding: 0;
+}
+
+.cover {
+  margin: 0 15px;
+}
+
+.subInfo {
+  width: 100px;
+  font-size: 12px;
+  color: gray;
+}

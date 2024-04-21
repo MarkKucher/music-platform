@@ -1,0 +1,60 @@
+.player {
+  min-height: 60px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  background-color: lightgray;
+  @media screen and (max-width: 400px) {
+    font-size: 0.8rem;
+  }
+}
+
+.info {
+  margin: 0 auto 0 20px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+.progress {
+  display: flex;
+  align-items: center;
+  max-width: 20vw;
+  scale: 1;
+  @media screen and (max-width: 400px) {
+    scale: 0.7;
+  }
+  @media screen and (max-width: 550px) {
+    margin-left: auto;
+  }
+}
+
+.change {
+  display: flex;
+  @media screen and (max-width: 550px) {
+    flex-direction: column;
+  }
+}
+
+.volume {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.icon, .volumeIcon {
+  @media screen and (max-width: 400px) {
+    font-size: 1.2rem;
+  }
+}
+
+.iconButton, .removeIcon, .volumeIcon {
+  padding: 0;
+}
+
+.artist {
+  color: gray;
+  font-size: 12px;
+}

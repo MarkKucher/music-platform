@@ -1,0 +1,10 @@
+.list {
+    margin-left: 5px;
+    @media screen and (max-width: 400px) {
+        font-size: 0.8rem;
+    }
+}
+
+.last {
+    margin-left: 10px !important;
+}

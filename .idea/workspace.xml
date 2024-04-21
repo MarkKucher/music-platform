@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8b9d0052-c83a-4d8e-8700-c3b9a53a25a2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/music-platform.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2P0iUkB9IgX6ORdAHH2LP455hZM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Admin/WebstormProjects/music-platform",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "ts.external.directory.path": "C:\\Users\\Admin\\WebstormProjects\\music-platform\\server\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="ReactDesignerToolWindowState">
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.rcb.reactComponents" value="false" />
+        <entry key="com.haulmont.rcb.reactInspector" value="false" />
+      </map>
+    </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\WebstormProjects\music-platform\server" />
+      <recent name="C:\Users\Admin\WebstormProjects\music-platform\server\dist" />
+      <recent name="C:\Users\Admin\WebstormProjects\music-platform\server\dist\src" />
+      <recent name="C:\Users\Admin\WebstormProjects\music-platform\server\src\user\service\send-mail-servise" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8b9d0052-c83a-4d8e-8700-c3b9a53a25a2" name="Changes" comment="" />
+      <created>1682600418392</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1682600418392</updated>
+      <workItem from="1682600420118" duration="5030000" />
+      <workItem from="1682694371632" duration="6619000" />
+      <workItem from="1682755763177" duration="3198000" />
+      <workItem from="1682794926314" duration="1629000" />
+      <workItem from="1682957656913" duration="5432000" />
+      <workItem from="1683013869537" duration="15531000" />
+      <workItem from="1683116721847" duration="6348000" />
+      <workItem from="1683184129287" duration="4662000" />
+      <workItem from="1683203251983" duration="697000" />
+      <workItem from="1683291219362" duration="6860000" />
+      <workItem from="1683356943784" duration="7731000" />
+      <workItem from="1683559061618" duration="5299000" />
+      <workItem from="1683641013714" duration="8078000" />
+      <workItem from="1683706534882" duration="11731000" />
+      <workItem from="1683720217045" duration="50000" />
+      <workItem from="1688114009318" duration="94000" />
+      <workItem from="1690808492372" duration="5020000" />
+      <workItem from="1690875969674" duration="10395000" />
+      <workItem from="1691392171757" duration="8856000" />
+      <workItem from="1691575157870" duration="9680000" />
+      <workItem from="1692014378578" duration="1260000" />
+      <workItem from="1697628641858" duration="27000" />
+      <workItem from="1699105934749" duration="37000" />
+      <workItem from="1710672263427" duration="245000" />
+      <workItem from="1711722261820" duration="891000" />
+      <workItem from="1711804004289" duration="1341000" />
+      <workItem from="1712434722626" duration="3405000" />
+      <workItem from="1712567302836" duration="7124000" />
+      <workItem from="1712685182660" duration="4844000" />
+      <workItem from="1712757712476" duration="3927000" />
+      <workItem from="1712856790582" duration="4584000" />
+      <workItem from="1712925370308" duration="4239000" />
+      <workItem from="1713009113913" duration="1449000" />
+      <workItem from="1713010669130" duration="116000" />
+      <workItem from="1713012608016" duration="197000" />
+      <workItem from="1713551679757" duration="603000" />
+      <workItem from="1713595484711" duration="160000" />
+      <workItem from="1713615367660" duration="15094000" />
+      <workItem from="1713684294275" duration="17097000" />
+      <workItem from="1713713633199" duration="34000" />
+      <workItem from="1713714390619" duration="1097000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/client" />
+      <path value="$PROJECT_DIR$/server" />
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+  </component>
+</project>

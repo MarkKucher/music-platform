@@ -1,0 +1,25 @@
+.wrapper {
+  width: 95vw;
+  height: 95vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 20px solid;
+  border-color: dodgerblue dodgerblue transparent dodgerblue;
+  animation: spinning linear infinite 700ms;
+}
+
+@keyframes spinning {
+  from {
+    rotate: 0deg
+  }
+  to {
+    rotate: 360deg
+  }
+}

@@ -1,0 +1,29 @@
+.list {
+  margin: 0 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.option {
+  margin-bottom: 20px !important;
+}
+
+.marginTop {
+  margin-top: 15px !important;
+}
+
+.title {
+  @media screen and (max-width: 350px) {
+    font-size: 1.3rem;
+  }
+}
+
+.field, .button {
+  margin-top: 5px !important;
+}
+
+.link {
+  cursor: pointer;
+}

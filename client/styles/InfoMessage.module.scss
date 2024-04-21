@@ -1,0 +1,19 @@
+.message {
+  position: absolute;
+  left: 25vw;
+  width: 50vw;
+  min-width: 300px;
+  min-height: 75px;
+  font-size: 2rem;
+  background: lightgray;
+  padding: 10px;
+  color: dodgerblue;
+  border-radius: 5px;
+  opacity: 1;
+  z-index: 2;
+  border: 3px solid dodgerblue;
+  @media screen and (max-width: 600px) {
+    left: calc(50% - 150px);
+    font-size: 1.5rem;
+  }
+}
