@@ -20,7 +20,7 @@ function Accordion(props) {
         },
         accordionText: {
             background: '#ededee',
-            overflowX: 'scroll'
+            overflowX: 'auto'
         }
     };
 
