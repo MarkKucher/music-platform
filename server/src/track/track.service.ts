@@ -50,7 +50,9 @@ export class TrackService {
   }
 
   async delete(id: ObjectId): Promise<ObjectId> {
-    const track = await this.trackModel.findByIdAndDelete(id); //.populate('comments');
+    const track = await this.trackModel.findByIdAndDelete(id);
+    this.fileService.deleteFile(track.picture);
+    this.fileService.deleteFile(track.audio);
     const albums = await this.albumModel.find();
     const changedAlbums = [];
     albums.map(async (alb) => {

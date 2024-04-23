@@ -185,6 +185,9 @@ export class UserService {
 
   async updatePicture(userId, picture) {
     const user = await this.userModel.findById(userId);
+    if(user.picture.includes('/')) {
+      this.fileService.deleteFile(user.picture)
+    }
     const picturePath = this.fileService.createFile(FileType.IMAGE, picture);
     user.picture = picturePath;
     await user.save();
@@ -194,6 +197,9 @@ export class UserService {
 
   async setDefaultPicture(userId) {
     const user = await this.userModel.findById(userId);
+    if(user.picture.includes('/')) {
+      this.fileService.deleteFile(user.picture)
+    }
     user.picture = `${Math.floor(Math.random() * 16777215).toString(16)}`;
     user.save();
     const userDto = new UserDto(user);

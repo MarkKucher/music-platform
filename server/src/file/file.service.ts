@@ -24,4 +24,17 @@ export class FileService {
       throw new HttpException(e.message, HttpStatus.INTERNAL_SERVER_ERROR);
     }
   }
+  deleteFile(location: string) {
+    try {
+      const [type, fileName] = location.split('/')
+      const filePath = path.resolve(__dirname, '..', 'static', type, fileName)
+      if (fs.existsSync(filePath)) {
+        fs.unlinkSync(filePath)
+      } else {
+        throw new HttpException('this file does not exist', HttpStatus.INTERNAL_SERVER_ERROR)
+      }
+    } catch (e) {
+      throw new HttpException(e.message, HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+  }
 }
