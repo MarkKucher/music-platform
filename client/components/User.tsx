@@ -1,9 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import styles from "../styles/User.module.scss"
 import {useActions} from "../hooks/useActions";
-import axios from "axios";
 import {AuthResponse} from "../models/response/AuthResponse";
-import {API_URL} from "../http";
+import $api, {API_URL} from "../http";
 import {useTsSelector} from "../hooks/useTsSelector";
 import {Button} from "@mui/material";
 import {useRouter} from "next/router";
@@ -19,12 +18,9 @@ const User: React.FC = () => {
 
     useEffect(() => {
         const checkAuth = async () => {
-            setLoading(true)
-            setTimeout(() => {
-                setLoading(false)
-            }, 8000)
             try {
-                const response = await axios.get<AuthResponse>(`${API_URL}/api/refresh`, {withCredentials: true})
+                setLoading(true)
+                const response = await $api.get<AuthResponse>(`${API_URL}/api/refresh`)
                 localStorage.setItem('token', response.data.accessToken);
                 setUser(response.data.user);
                 setAuth()

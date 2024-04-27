@@ -4,15 +4,16 @@ import {InjectModel} from "@nestjs/mongoose";
 import {Token, TokenDocument} from "../schema/token.schema";
 import {Model} from "mongoose";
 
-
+const JWT_ACCESS_SECRET = process.env.JWT_ACCESS_SECRET || 'randomstr'
+const JWT_REFRESH_SECRET = process.env.JWT_REFRESH_SECRET || 'strrandom'
 
 @Injectable()
 export class TokenService{
     constructor(@InjectModel(Token.name) private tokenModel: Model<TokenDocument>) {
     }
     generateTokens(payload) {
-        const accessToken = jwt.sign(payload, 'process.env.JWT_ACCESS_SECRET', {expiresIn: '7d'})
-        const refreshToken = jwt.sign(payload, 'process.env.JWT_REFRESH_SECRET', {expiresIn: '60d'})
+        const accessToken = jwt.sign(payload, JWT_ACCESS_SECRET, {expiresIn: '1d'})
+        const refreshToken = jwt.sign(payload, JWT_REFRESH_SECRET, {expiresIn: '7d'})
         return {accessToken, refreshToken};
     }
     async saveToken(userId, refreshToken) {
@@ -32,7 +33,7 @@ export class TokenService{
 
     validateAccessToken(token) {
         try{
-            const userData = jwt.verify(token, 'process.env.JWT_ACCESS_SECRET') // strisongmo
+            const userData = jwt.verify(token, JWT_ACCESS_SECRET)
             return userData;
         } catch (e) {
             return null;
@@ -41,7 +42,7 @@ export class TokenService{
 
     validateRefreshToken(token) {
         try{
-            const userData = jwt.verify(token, 'process.env.JWT_REFRESH_SECRET')
+            const userData = jwt.verify(token, JWT_REFRESH_SECRET)
             return userData;
         } catch (e) {
             return null;

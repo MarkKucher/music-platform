@@ -134,12 +134,12 @@ export class UserService {
 
   async refresh(refreshToken) {
     if (!refreshToken) {
-      throw new Error('Wrong refresh token');
+      throw ApiError.BadRequest('No refresh token');
     }
     const userData = this.tokenService.validateRefreshToken(refreshToken);
     const tokenFromDB = await this.tokenService.findToken(refreshToken);
     if (!userData || !tokenFromDB) {
-      throw new Error('Wrong user');
+      throw ApiError.UnauthorizedError();
     }
     const user = await this.userModel.findById(userData.id);
 

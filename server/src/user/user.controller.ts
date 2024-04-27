@@ -40,7 +40,7 @@ export class UserController {
     try {
       const userData = await this.userService.registration(dto);
       res.cookie('refreshToken', userData.refreshToken, {
-        maxAge: 60 * 24 * 60 * 60 * 1000,
+        maxAge: 7 * 24 * 60 * 60 * 1000,
       });
       return res.json(userData);
     } catch (err) {
@@ -59,7 +59,7 @@ export class UserController {
       const { email, password } = dto;
       const userData = await this.userService.login(email, password);
       res.cookie('refreshToken', userData.refreshToken, {
-        maxAge: 60 * 24 * 60 * 60 * 1000,
+        maxAge: 7 * 24 * 60 * 60 * 1000,
         httpOnly: true,
       });
       return res.json(userData);
@@ -116,12 +116,17 @@ export class UserController {
       const refreshToken = req.cookies.refreshToken;
       const userData = await this.userService.refresh(refreshToken);
       res.cookie('refreshToken', userData.refreshToken, {
-        maxAge: 60 * 24 * 60 * 60 * 1000,
+        maxAge: 7 * 24 * 60 * 60 * 1000,
         httpOnly: false,
       });
       return res.json(userData);
-    } catch (e) {
-      console.log(e);
+    } catch (err) {
+      if (err instanceof ApiError) {
+        return res
+            .status(err.status)
+            .json({ message: err.message, errors: err.errors });
+      }
+      return res.status(500).json({ message: 'Unhandled error' });
     }
   }
 

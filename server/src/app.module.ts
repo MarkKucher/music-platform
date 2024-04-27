@@ -20,7 +20,7 @@ import { MailModule } from './user/service/send-mail-servise/mailer.module';
   imports: [
     ServeStaticModule.forRoot({ rootPath: join(__dirname, 'static') }),
     MongooseModule.forRoot(
-      `mongodb+srv://${process.env.MONGODB_USER}:${process.env.MONGODB_PASSWORD}@cluster0.nz3nbmy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`,
+      `mongodb+srv://Mark:19522006mongodb@cluster0.nz3nbmy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`,
     ),
     MailModule,
     TrackModule,
