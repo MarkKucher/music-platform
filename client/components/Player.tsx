@@ -77,10 +77,10 @@ const Player = () => {
             audio.onVolumeChange = () => {
                 setVolume(audio.volume * 100)
             }
-            audio.onPause = () => {
+            audio.onpause = () => {
                 pauseTrack()
             }
-            audio.onPlay = () => {
+            audio.onplay = () => {
                 playTrack()
             }
         }
