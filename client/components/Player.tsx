@@ -16,7 +16,6 @@ let audio;
 let secs = 0;
 let isFirstRender = true;
 
-
 const Player = () => {
     const {pause, volume, active, duration, currentTime} = useTsSelector(state => state.player)
     const {user} = useTsSelector(state => state.user)
@@ -74,6 +73,15 @@ const Player = () => {
                     pauseTrack()
                     shouldPlayNext()
                 }
+            }
+            audio.onVolumeChange = () => {
+                setVolume(audio.volume * 100)
+            }
+            audio.onPause = () => {
+                pauseTrack()
+            }
+            audio.onPlay = () => {
+                playTrack()
             }
         }
     }
