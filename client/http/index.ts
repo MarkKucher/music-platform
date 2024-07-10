@@ -1,7 +1,7 @@
 import axios from 'axios';
 import {AuthResponse} from "../models/response/AuthResponse";
 
-export const API_URL = 'https://music-platform-hxx7.onrender.com'
+export const API_URL = process.env.API || 'https://music-platform-server-production.up.railway.app'
 
 const $api = axios.create({
     withCredentials: true,

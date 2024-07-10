@@ -74,9 +74,6 @@ const Player = () => {
                     shouldPlayNext()
                 }
             }
-            audio.onVolumeChange = () => {
-                setVolume(audio.volume * 100)
-            }
             audio.onpause = () => {
                 pauseTrack()
             }

@@ -25,7 +25,11 @@ const Index = () => {
     const [pages, setPages] = useState<number[]>([1])
 
     useEffect(() => {
+        setLoading(true)
         dispatch(fetchTracks())
+            .finally(() => {
+                setLoading(false)
+            })
     }, [])
 
     useEffect(() => {
@@ -91,9 +95,7 @@ const Index = () => {
                         onChange={search}
                         label={'Search track'}
                     />
-                    {loading ? <h1>Loading...</h1>
-                        : <TrackList tracks={tracks} local={false}/>
-                    }
+                    <TrackList loading={loading} tracks={tracks} local={false}/>
                 </Card>
                 {!loading && <Pagination totalPages={pages} page={page} setPage={setPage}/>}
             </Grid>
