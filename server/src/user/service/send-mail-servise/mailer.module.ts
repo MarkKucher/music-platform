@@ -1,6 +1,7 @@
 import { MailerModule } from '@nestjs-modules/mailer';
 import { Module } from '@nestjs/common';
 import { SendMailService } from './send-mail.service';
+import {MAIL_PASS} from "../../../utils";
 
 @Module({
   imports: [
@@ -15,7 +16,7 @@ import { SendMailService } from './send-mail.service';
         secure: true,
         auth: {
           user: 'markkucher100@gmail.com',
-          pass: 'xqfoeawoibwfqqqa',
+          pass: MAIL_PASS,
         },
       },
     }),
