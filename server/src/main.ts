@@ -11,6 +11,7 @@ const start = async () => {
     app.enableCors({
       credentials: true,
       origin: [CLIENT, 'http://localhost:3000'],
+      methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE', 'OPTIONS']
     });
     app.use(cookieParser());
     app.useGlobalPipes(new ValidationPipe());
