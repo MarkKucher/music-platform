@@ -84,25 +84,6 @@ export class UserService {
     return { ...tokens, user: userDto };
   }
 
-  async redirectedToPassword(email, hash) {
-    const shouldPass = await bcrypt.compare(email, hash)
-
-    if(!shouldPass) {
-      throw new Error('wrong link')
-    }
-
-    eventEmitter.emit('redirected');
-  }
-
-  passwordCheck() {
-    if (redirected) {
-      redirected = false;
-      return true;
-    } else {
-      return false;
-    }
-  }
-
   async activate(activationLink) {
     const user = await this.userModel.findOne({ activationLink });
     if (!user) {
@@ -175,7 +156,9 @@ export class UserService {
 
   async forgotPassword(dto) {
     const {email} = dto;
-    const hash = await bcrypt.hash(email, 3)
+    let hash = await bcrypt.hash(email, 3)
+
+    hash = hash.replace(/\//g, "slash");
 
     await this.sendMailService.forgotPasswordMail(
       email,
@@ -183,9 +166,28 @@ export class UserService {
     );
   }
 
+  async redirectedToPassword(email, hash) {
+    const shouldPass = await bcrypt.compare(email, hash.replace(/slash/g, "/"))
+
+    if(!shouldPass) {
+      throw new Error('wrong link')
+    }
+
+    eventEmitter.emit('redirected');
+  }
+
+  passwordCheck() {
+    if (redirected) {
+      redirected = false;
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   async changePassword(id, password) {
     const user = await this.userModel.findById(id);
-    const hashedPassword = await bcrypt.hash(password, 3);
+    const hashedPassword = await bcrypt.hash(password, 4);
     user.password = hashedPassword;
     await user.save();
     const userDto = new UserDto(user);
