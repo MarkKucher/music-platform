@@ -84,7 +84,13 @@ export class UserService {
     return { ...tokens, user: userDto };
   }
 
-  redirectedToPassword() {
+  async redirectedToPassword(email, hash) {
+    const shouldPass = await bcrypt.compare(email, hash)
+
+    if(!shouldPass) {
+      throw new Error('wrong link')
+    }
+
     eventEmitter.emit('redirected');
   }
 
@@ -168,9 +174,12 @@ export class UserService {
   }
 
   async forgotPassword(dto) {
+    const {email} = dto;
+    const hash = await bcrypt.hash(email, 3)
+
     await this.sendMailService.forgotPasswordMail(
-      dto.email,
-      `${HOST}/api/passwordForgot/`,
+      email,
+      `${HOST}/api/passwordForgot/${email}/${hash}`,
     );
   }
 

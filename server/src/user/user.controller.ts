@@ -95,10 +95,10 @@ export class UserController {
     }
   }
 
-  @Get('/passwordForgot')
-  redirect(@Res() res) {
+  @Get('/passwordForgot/:email/:hash')
+  async redirect(@Res() res, @Param('email') email, @Param('hash') hash) {
     try {
-      this.userService.redirectedToPassword();
+      await this.userService.redirectedToPassword(email, hash);
       res.redirect(`${CLIENT}/user/settings`);
     } catch (e) {
       console.log(e);
