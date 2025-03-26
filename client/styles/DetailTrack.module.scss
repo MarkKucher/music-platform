@@ -1,0 +1,60 @@
+.miniPlayer{
+  background-color: lightgray;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  width: 240px;
+  height: 40px;
+}
+.status{
+  display: flex;
+  align-items: center;
+
+}
+.info {
+  margin: 20px 0;
+}
+
+.track {
+  margin-right: 30px;
+}
+
+@media screen and (max-width: 600px) {
+  .track {
+    margin-right: 0;
+  }
+  .info {
+    justify-content: space-around;
+  }
+}
+
+.modal__container {
+  height: 75%;
+}
+
+.modal__content {
+  display: flex;
+}
+
+.separateLine{
+  width: 240px;
+}
+.timer {
+  margin-left: auto;
+}
+.backButton {
+  font-size: 12px;
+  width: 240px;
+}
+.selected {
+  margin-left: 3px;
+  color: blue;
+}
+
+.details {
+  h2 {
+    @media screen and (max-width: 400px) {
+      font-size: 1rem;
+    }
+  }
+}

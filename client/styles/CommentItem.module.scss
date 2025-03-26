@@ -1,0 +1,48 @@
+.comment {
+  margin-bottom: 20px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  background: lightgray !important;
+}
+
+.usernameComment {
+  border-bottom: 2px solid lightgray;
+  width: 100%;
+  padding-right: 3px;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 5px 5px;
+}
+
+.content {
+  width: 100%;
+}
+
+.text {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  min-height: 50px;
+  padding: 3px;
+  border-top: 2px solid gray;
+  border-bottom: 2px solid gray;
+}
+
+.footer {
+  width: 100%;
+  max-height: 18px;
+  background: lightgray;
+  color: gray;
+  font-size: 12px;
+  align-items: center;
+  padding: 3px;
+  bottom: 0;
+}
+
+.like, .remove {
+  margin-left: auto;
+  padding: 0 0 0 10px !important;
+}

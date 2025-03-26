@@ -1,0 +1,36 @@
+.option {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 75px;
+}
+
+.card {
+  width: 600px;
+}
+
+.main {
+  margin: 70px 0;
+  height: 200px;
+}
+
+.form {
+  padding: 20px;
+}
+
+.field, .footer {
+  margin-top: 10px !important;
+}
+
+.footer {
+  padding: 5px;
+}
+
+.link {
+  cursor: pointer;
+}
+
+.modal__field, .modal__button {
+  margin-top: 25px;
+}

@@ -1,0 +1,41 @@
+@mixin alb {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  border: 2px solid lightgray;
+}
+
+.album, .favoriteInfo {
+  @include alb;
+  cursor: pointer;
+}
+
+.albumActive {
+  @include alb;
+  background: lightblue !important;
+}
+
+.album:hover {
+  background-color: lightgray;
+}
+
+.favoriteInfo {
+  background-color: pink !important;
+}
+
+.favoriteInfo:hover {
+  background-color: lightcoral;
+}
+
+.info {
+  margin: 0 20px;
+}
+
+.length {
+  font-size: 12px;
+  color: gray;
+}
+
+.deleteIcon {
+  margin-left: auto;
+}
